@@ -1,6 +1,10 @@
 from minio import Minio
 import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 minioClient = Minio(os.environ['MINIO_IP'],
                     access_key=os.environ['MINIO_ACCESS_KEY'],
                     secret_key=os.environ['MINIO_SECRET_KEY'],
